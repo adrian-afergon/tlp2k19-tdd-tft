@@ -1,6 +1,6 @@
 import { shallow } from 'enzyme';
 import * as React from 'react';
-import { Image} from './';
+import { Image} from './index';
 
 describe('Image', ()=> {
   it('should display the image source', function () {
