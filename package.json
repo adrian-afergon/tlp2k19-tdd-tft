@@ -12,11 +12,23 @@
     "react-scripts": "3.0.1",
     "typescript": "3.5.2"
   },
+  "devDependencies": {
+    "@storybook/react": "^5.1.9",
+    "@types/enzyme": "^3.10.1",
+    "@types/storybook__react": "^4.0.2",
+    "awesome-typescript-loader": "^5.2.1",
+    "enzyme": "^3.10.0",
+    "hygen": "^4.0.7",
+    "react-docgen-typescript-loader": "^3.1.0",
+    "react-docgen-typescript-webpack-plugin": "^1.1.0"
+  },
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "storybook": "start-storybook -p 9001 -c .storybook",
+    "react-new-fc": "node_modules/.bin/hygen fc new"
   },
   "eslintConfig": {
     "extends": "react-app"
