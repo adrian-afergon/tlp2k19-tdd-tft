@@ -1,10 +1,10 @@
 import * as React from 'react';
 import './Image.scss';
 
-export const Image: React.FC<{}> = () => (
-  <div className="Image">
-    Hello from Image!
-  </div>
+type ImageProps = React.DetailedHTMLProps<React.ImgHTMLAttributes<HTMLImageElement>, HTMLImageElement>
+
+export const Image: React.FC<ImageProps> = (props) => (
+  <img {...props} />
 );
 
 Image.displayName = 'Image';
