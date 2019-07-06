@@ -3,7 +3,7 @@ import './App.scss';
 
 const App: React.FC = () => {
   return (
-    <div className="App" />
+    <div className="App" data-test-id="App"/>
   );
 };
 

@@ -16,11 +16,13 @@
   "devDependencies": {
     "@storybook/react": "^5.1.9",
     "@types/enzyme": "^3.10.1",
+    "@types/puppeteer": "^1.12.4",
     "@types/storybook__react": "^4.0.2",
     "awesome-typescript-loader": "^5.2.1",
     "enzyme": "^3.10.0",
     "enzyme-adapter-react-16": "^1.14.0",
     "hygen": "^4.0.7",
+    "puppeteer": "^1.18.1",
     "react-docgen-typescript-loader": "^3.1.0",
     "react-docgen-typescript-webpack-plugin": "^1.1.0"
   },
