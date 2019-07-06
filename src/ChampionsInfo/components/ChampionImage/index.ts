@@ -1,0 +1,1 @@
+export { ChampionImage } from './ChampionImage'
