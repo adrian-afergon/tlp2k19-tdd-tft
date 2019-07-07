@@ -4,18 +4,15 @@ import { Image } from '../Image/';
 import {Champion} from "./ChampionImage.spec";
 
 type ChampionImageProps = {
-    id?:string,
-    name: string,
-    src: string,
+    champion: Champion;
     onClick?: (id: string) => void
-    champion?: Champion;
 }
 
-export const ChampionImage: React.FC<ChampionImageProps> = ({id, name, src, onClick, champion}) => {
+export const ChampionImage: React.FC<ChampionImageProps> = ({champion, onClick}) => {
 
     const handleClick = () => {
-        if(onClick && id) {
-            onClick(id)
+        if(onClick) {
+            onClick(champion.id)
         }
     };
 
