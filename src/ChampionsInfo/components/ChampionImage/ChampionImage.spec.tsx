@@ -20,13 +20,9 @@ describe('ChampionImage', ()=> {
     }
   });
 
-  it('should display the component', ()=>{
-    const wrapper = shallow(<ChampionImage champion={aChampion}/>);
-    expect(wrapper.exists()).toBeTruthy();
-  });
-
   it('should find the image inside', () => {
     const wrapper = shallow(<ChampionImage champion={aChampion}/>);
+    expect(wrapper.exists()).toBeTruthy();
     expect(wrapper.find('[data-test-id="image"]').exists()).toBeTruthy();
   });
 
