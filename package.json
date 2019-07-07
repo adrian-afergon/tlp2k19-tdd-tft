@@ -24,7 +24,8 @@
     "hygen": "^4.0.7",
     "puppeteer": "^1.18.1",
     "react-docgen-typescript-loader": "^3.1.0",
-    "react-docgen-typescript-webpack-plugin": "^1.1.0"
+    "react-docgen-typescript-webpack-plugin": "^1.1.0",
+    "tslint": "^5.18.0"
   },
   "scripts": {
     "start": "react-scripts start",
