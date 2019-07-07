@@ -1,4 +1,4 @@
-import { shallow } from 'enzyme';
+import {shallow, ShallowWrapper} from 'enzyme';
 import * as React from 'react';
 import { ChampionSelector} from './';
 import {Champion} from '../../models/Champion';
@@ -10,16 +10,21 @@ describe('ChampionSelector', () => {
   const fiora: Champion = buildChampion({name: 'Fiora'} as Champion);
   const someChampions: Champion[] = [aatrox, kayle, fiora];
 
+  let wrapper: ShallowWrapper;
+  let aSelectHandler: jest.Mock;
+
+  beforeEach(() => {
+    aSelectHandler = jest.fn();
+    wrapper = shallow(<ChampionSelector champions={someChampions} onSelect={aSelectHandler}/>);
+  });
+
   it('should display the champions', () => {
-    const wrapper = shallow(<ChampionSelector champions={someChampions}/>);
     const championImages = wrapper.find('ChampionImage');
 
     expect(championImages.length).toBe(someChampions.length);
   });
 
   it('should select a champion when is clicked', () => {
-    const aSelectHandler = jest.fn();
-    const wrapper = shallow(<ChampionSelector champions={someChampions} onSelect={aSelectHandler}/>);
     const aatroxImage = wrapper.find('[data-test-id="Aatrox"]');
     aatroxImage.simulate('click');
 
