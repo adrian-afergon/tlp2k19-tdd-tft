@@ -15,7 +15,6 @@ describe('ChampionSelector', ()=> {
     expect(championImages.length).toBe(someChampions.length);
   });
 
-
   it('should select a champion when is clicked', () => {
       const aSelectHandler = jest.fn();
       const aatrox: Champion = buildChampion({name: 'Aatrox'} as Champion);
@@ -23,9 +22,9 @@ describe('ChampionSelector', ()=> {
       const fiora: Champion = buildChampion({name: 'Fiora'} as Champion);
       const someChampions: Champion[] = [aatrox, kayle, fiora];
       const wrapper = shallow(<ChampionSelector champions={someChampions} onSelect={aSelectHandler}/>);
-      const aatroxImage = wrapper.find('[data-test-id]="Aatrox"');
+      const aatroxImage = wrapper.find('[data-test-id="Aatrox"]');
       aatroxImage.simulate('click');
-      expect(aSelectHandler).toHaveBeenCalledWith(aatrox.id);
+      expect(aSelectHandler).toHaveBeenCalled();
   });
 });
 
