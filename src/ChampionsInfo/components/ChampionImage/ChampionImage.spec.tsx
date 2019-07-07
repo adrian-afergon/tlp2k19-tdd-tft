@@ -4,20 +4,20 @@ import { ChampionImage} from './';
 
 export type ChampionId = string;
 export interface Champion {
-  id: ChampionId,
-  name: string,
-  image: string
+  id: ChampionId;
+  name: string;
+  image: string;
 }
 
-describe('ChampionImage', ()=> {
+describe('ChampionImage', () => {
 
   let aChampion: Champion;
   beforeEach(() => {
     aChampion = {
-      id: "Irrelevant champion id",
-      name: "Irrelevant champion name",
-      image: "Irrelevant champion image"
-    }
+      id: 'Irrelevant champion id',
+      name: 'Irrelevant champion name',
+      image: 'Irrelevant champion image',
+    };
   });
 
   it('should find the image inside', () => {
@@ -33,7 +33,6 @@ describe('ChampionImage', ()=> {
         onClick={aClickHandler}
     />);
     wrapper.simulate('click');
-    expect(aClickHandler).toHaveBeenCalledWith("irrelevant id");
+    expect(aClickHandler).toHaveBeenCalledWith('irrelevant id');
   });
 });
-

@@ -14,6 +14,7 @@
     "typescript": "3.5.2"
   },
   "devDependencies": {
+    "@storybook/addon-actions": "^5.1.9",
     "@storybook/react": "^5.1.9",
     "@types/enzyme": "^3.10.1",
     "@types/puppeteer": "^1.12.4",
