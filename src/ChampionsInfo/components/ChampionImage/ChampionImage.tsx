@@ -21,7 +21,7 @@ export const ChampionImage: React.FC<ChampionImageProps> = ({id, name, src, onCl
 
     return (
     <div onClick={handleClick}>
-        <Image src={src} alt={name} data-test-id="image"/>
+        <Image src={champion.image} alt={champion.name} data-test-id="image"/>
     </div>
 )};
 

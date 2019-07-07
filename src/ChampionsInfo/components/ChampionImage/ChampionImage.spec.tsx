@@ -11,7 +11,7 @@ export interface Champion {
 
 describe('ChampionImage', ()=> {
 
-  let aChampion;
+  let aChampion: Champion;
   beforeEach(() => {
     aChampion = {
       id: "Irrelevant champion id",
@@ -21,12 +21,12 @@ describe('ChampionImage', ()=> {
   });
 
   it('should display the component', ()=>{
-    const wrapper = shallow(<ChampionImage src="irrelevant champion image" name="Irrelevant champion name"/>);
+    const wrapper = shallow(<ChampionImage src="irrelevant champion image" name="Irrelevant champion name" champion={aChampion}/>);
     expect(wrapper.exists()).toBeTruthy();
   });
 
   it('should find the image inside', () => {
-    const wrapper = shallow(<ChampionImage src="irrelevant champion image" name="Irrelevant champion name"/>);
+    const wrapper = shallow(<ChampionImage src="irrelevant champion image" name="Irrelevant champion name" champion={aChampion}/>);
     expect(wrapper.find('[data-test-id="image"]').exists()).toBeTruthy();
   });
 
