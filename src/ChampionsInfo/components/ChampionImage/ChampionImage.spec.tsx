@@ -1,13 +1,7 @@
-import { shallow } from 'enzyme';
+import {shallow} from 'enzyme';
 import * as React from 'react';
-import { ChampionImage} from './';
-
-export type ChampionId = string;
-export interface Champion {
-  id: ChampionId;
-  name: string;
-  image: string;
-}
+import {ChampionImage} from './';
+import {Champion} from '../../models/Champion';
 
 describe('ChampionImage', () => {
 

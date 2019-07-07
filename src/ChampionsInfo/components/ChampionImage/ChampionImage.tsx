@@ -1,7 +1,7 @@
 import * as React from 'react';
 import './ChampionImage.scss';
 import { Image } from '../Image/';
-import {Champion, ChampionId} from './ChampionImage.spec';
+import {Champion, ChampionId} from '../../models/Champion';
 
 interface ChampionImageProps {
     champion: Champion;

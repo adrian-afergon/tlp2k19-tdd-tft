@@ -1,7 +1,7 @@
 import { shallow } from 'enzyme';
 import * as React from 'react';
 import { ChampionSelector} from './';
-import {Champion} from '../ChampionImage/ChampionImage.spec';
+import {Champion} from '../../models/Champion';
 
 describe('ChampionSelector', () => {
 
@@ -30,5 +30,5 @@ describe('ChampionSelector', () => {
 const buildChampion = ({id, name, image}: Champion): Champion => ({
   id: id ? id : 'irrelevant id',
   name: name ? name : 'irrelevant name',
-  image: image ? image : 'irrelevant image'
+  image: image ? image : 'irrelevant image',
 });

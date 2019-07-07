@@ -1,7 +1,7 @@
 import { storiesOf } from '@storybook/react';
 import * as React from 'react';
 import {ChampionImage} from './ChampionImage';
-import {Champion} from './ChampionImage.spec';
+import {Champion} from '../../models/Champion';
 
 const aChampion: Champion = {
     id: 'irrelevant id',
