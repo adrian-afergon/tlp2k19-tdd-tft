@@ -4,4 +4,5 @@ export interface Champion {
     id: ChampionId;
     name: string;
     image: string;
+    info?: string;
 }

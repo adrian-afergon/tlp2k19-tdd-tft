@@ -9,6 +9,7 @@ describe('ChampionCard', () => {
     name: 'irrelevant name',
     image: 'irrelevant image',
     id: 'irrelevant id',
+    info: 'irrelevant champion info',
   };
 
   let wrapper: ShallowWrapper;
