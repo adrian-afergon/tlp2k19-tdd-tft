@@ -6,6 +6,6 @@ import * as React from 'react';
 import {<%= name %>} from './<%= name %>';
 
 storiesOf('<%= name %>', module)
-    .add('with text', () => (
-    <<%= name %> />
+  .add('with text', () => (
+  <<%= name %> />
 ));
