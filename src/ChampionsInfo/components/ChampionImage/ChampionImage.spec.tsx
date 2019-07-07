@@ -2,7 +2,24 @@ import { shallow } from 'enzyme';
 import * as React from 'react';
 import { ChampionImage} from './';
 
+export type ChampionId = string;
+export interface Champion {
+  id: ChampionId,
+  name: string,
+  image: string
+}
+
 describe('ChampionImage', ()=> {
+
+  let aChampion;
+  beforeEach(() => {
+    aChampion = {
+      id: "Irrelevant champion id",
+      name: "Irrelevant champion name",
+      image: "Irrelevant champion image"
+    }
+  });
+
   it('should display the component', ()=>{
     const wrapper = shallow(<ChampionImage src="irrelevant champion image" name="Irrelevant champion name"/>);
     expect(wrapper.exists()).toBeTruthy();
