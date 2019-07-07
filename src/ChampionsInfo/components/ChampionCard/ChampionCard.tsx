@@ -1,7 +1,12 @@
 import * as React from 'react';
 import './ChampionCard.scss';
+import {Champion} from '../../models/Champion';
 
-export const ChampionCard: React.FC<{}> = () => (
+interface ChampionCardProps {
+    champion: Champion;
+}
+
+export const ChampionCard: React.FC<ChampionCardProps> = ({champion}) => (
   <div className="ChampionCard">
     Hello from ChampionCard!
   </div>
