@@ -1,7 +1,7 @@
 import * as React from 'react';
 import './ChampionSelector.scss';
-import {Champion, ChampionId} from "../ChampionImage/ChampionImage.spec";
-import {ChampionImage} from "../ChampionImage";
+import {Champion, ChampionId} from '../ChampionImage/ChampionImage.spec';
+import {ChampionImage} from '../ChampionImage';
 
 interface ChampionSelectorProps {
     champions: Champion[];
@@ -9,7 +9,7 @@ interface ChampionSelectorProps {
 }
 
 export const ChampionSelector: React.FC<ChampionSelectorProps>
-    = ({champions, onSelect}) =>(
+    = ({champions, onSelect}) => (
     <section className="ChampionSelector">
         {champions.map((champion) =>
             <ChampionImage
