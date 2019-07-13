@@ -2,15 +2,16 @@ import * as React from 'react';
 import { ChampionsInfo } from './';
 import { render } from '@testing-library/react';
 import { Champion } from '../../models/Champion';
+import { buildChampion } from '../../models/_tests/champion-helper';
 
 export interface ChampionService {
   getChampions: () => Promise<Champion[]>;
 }
 
 describe('ChampionsInfo', () => {
-  const aatrox: Champion = { info: '', image: '', id: 'irrelevant 1', name: 'aatrox' };
-  const kayle: Champion = { info: '', image: '', id: 'irrelevant 2', name: 'kayle' };
-  const fiora: Champion = { info: '', image: '', id: 'irrelevant 3', name: 'fiora' };
+  const aatrox: Champion = buildChampion({ id: 'aatrox', name: 'Aatrox' } as Champion);
+  const kayle: Champion = buildChampion({ id: 'kayle', name: 'Kayle' } as Champion);
+  const fiora: Champion = buildChampion({ id: 'fiora', name: 'Fiora' } as Champion);
   const someChampions: Champion[] = [aatrox, kayle, fiora];
   let championService: ChampionService;
 
