@@ -1,21 +1,23 @@
 import * as React from 'react';
 import './ChampionsInfo.scss';
-import {useEffect, useState} from 'react';
+import { useEffect, useState } from 'react';
+import { Champion } from '../../models/Champion';
+import { ChampionService } from './ChampionsInfo.spec';
+import { ChampionSelector } from '../../components/ChampionSelector';
 
-export const ChampionsInfo: React.FC<{methodTest: () => Promise<string> }> = ({methodTest}) => {
+interface ChampionsInfoProps {
+  championService: ChampionService;
+}
 
-    const [hello, setHello] = useState('');
-    const sayHello = async () => {
-        setHello(await methodTest());
-    };
+export const ChampionsInfo: React.FC<ChampionsInfoProps> = ({ championService }) => {
+  const [champions, setChampions] = useState([] as Champion[]);
+  useEffect(() => {
+    championService.getChampions().then(setChampions);
+  }, [championService]);
 
-    useEffect(() => {
-        sayHello().then(() => {});
-    }, []);
-
-    return (
+  return (
     <div className="ChampionsInfo">
-      <p data-test-id="message">{hello}</p>
+      <ChampionSelector champions={champions} onSelect={() => ''} />
     </div>
   );
 };
