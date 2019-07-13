@@ -1,25 +1,28 @@
-import * as React from 'react';
-import './ChampionImage.scss';
-import { Image } from '../Image/';
-import {Champion, ChampionId} from '../../models/Champion';
+import * as React from "react";
+import "./ChampionImage.scss";
+import { Image } from "../Image/";
+import { Champion, ChampionId } from "../../models/Champion";
 
 interface ChampionImageProps {
-    champion: Champion;
-    onClick?: (id: ChampionId) => void;
+  champion: Champion;
+  onClick?: (id: ChampionId) => void;
 }
 
-export const ChampionImage: React.FC<ChampionImageProps> = ({champion, onClick}) => {
+export const ChampionImage: React.FC<ChampionImageProps> = ({
+  champion,
+  onClick
+}) => {
+  const handleClick = () => {
+    if (onClick) {
+      onClick(champion.id);
+    }
+  };
 
-    const handleClick = () => {
-        if (onClick) {
-            onClick(champion.id);
-        }
-    };
-
-    return (
+  return (
     <div onClick={handleClick}>
-        <Image src={champion.image} alt={champion.name} data-test-id="image"/>
+      <Image src={champion.image} alt={champion.name} data-test-id="image" />
     </div>
-); };
+  );
+};
 
-ChampionImage.displayName = 'ChampionImage';
+ChampionImage.displayName = "ChampionImage";
