@@ -1,8 +1,8 @@
-import React from "react";
-import "./App.scss";
+import React from 'react';
+import './App.scss';
 
 const App: React.FC = () => {
-  return <div className="App" data-test-id="App" />;
+  return <div className="App" data-testid="App" />;
 };
 
 export default App;

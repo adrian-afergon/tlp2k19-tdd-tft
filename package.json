@@ -16,6 +16,7 @@
   "devDependencies": {
     "@storybook/addon-actions": "^5.1.9",
     "@storybook/react": "^5.1.9",
+    "@testing-library/react": "^8.0.4",
     "@types/enzyme": "^3.10.1",
     "@types/puppeteer": "^1.12.4",
     "@types/storybook__react": "^4.0.2",
@@ -23,6 +24,7 @@
     "enzyme": "^3.10.0",
     "enzyme-adapter-react-16": "^1.14.0",
     "hygen": "^4.0.7",
+    "prettier": "^1.18.2",
     "puppeteer": "^1.18.1",
     "react-docgen-typescript-loader": "^3.1.0",
     "react-docgen-typescript-webpack-plugin": "^1.1.0",

@@ -1,9 +1,9 @@
 import { storiesOf } from '@storybook/react';
-import { action } from '@storybook/addon-actions';
 import * as React from 'react';
-import { ChampionSelector } from './ChampionSelector';
-import { Champion } from '../../models/Champion';
+import { ChampionsInfo } from './ChampionsInfo';
+import { ChampionService } from './ChampionsInfo.spec';
 import { buildChampion } from '../../models/_tests/champion-helper';
+import { Champion } from '../../models/Champion';
 
 const aatrox: Champion = buildChampion({
   id: 'aatrox',
@@ -22,6 +22,10 @@ const fiora: Champion = buildChampion({
 } as Champion);
 const someChampions: Champion[] = [aatrox, kayle, fiora];
 
-storiesOf('ChampionSelector', module).add('display champions', () => (
-  <ChampionSelector champions={someChampions} onSelect={action('clicked')} />
+const championStoryService: ChampionService = {
+  getChampions: () => Promise.resolve(someChampions),
+};
+
+storiesOf('ChampionsInfo', module).add('with async actions', () => (
+  <ChampionsInfo championService={championStoryService} />
 ));
