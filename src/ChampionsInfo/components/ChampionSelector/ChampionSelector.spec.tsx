@@ -27,7 +27,7 @@ describe('ChampionSelector', () => {
   });
 
   it('should select a champion when is clicked', () => {
-    const aatroxImage = wrapper.find('[data-test-id="Aatrox"]');
+    const aatroxImage = wrapper.find('[data-testid="Aatrox"]');
     aatroxImage.simulate('click');
 
     expect(aSelectHandler).toHaveBeenCalled();

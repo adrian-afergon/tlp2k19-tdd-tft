@@ -1,6 +1,6 @@
 import * as React from 'react';
 import { ChampionsInfo } from './';
-import { render } from '@testing-library/react';
+import { render, findByTestId, fireEvent } from '@testing-library/react';
 import { Champion } from '../../models/Champion';
 import { buildChampion } from '../../models/_tests/champion-helper';
 
@@ -9,7 +9,11 @@ export interface ChampionService {
 }
 
 describe('ChampionsInfo', () => {
-  const aatrox: Champion = buildChampion({ id: 'aatrox', name: 'Aatrox' } as Champion);
+  const aatrox: Champion = buildChampion({
+    id: 'aatrox',
+    name: 'Aatrox',
+    info: 'irrelevant aatrox info',
+  } as Champion);
   const kayle: Champion = buildChampion({ id: 'kayle', name: 'Kayle' } as Champion);
   const fiora: Champion = buildChampion({ id: 'fiora', name: 'Fiora' } as Champion);
   const someChampions: Champion[] = [aatrox, kayle, fiora];
@@ -31,5 +35,15 @@ describe('ChampionsInfo', () => {
 
     expect(championService.getChampions).toHaveBeenCalled();
     expect(displayedChampions.length).toEqual(someChampions.length);
+  });
+
+  it('should display the info when a champion is selected', async () => {
+    const { container } = await render(
+      <ChampionsInfo championService={championService} />,
+    );
+    const aatroxImage = await findByTestId(container, 'aatrox-image');
+    fireEvent.click(aatroxImage);
+    const info = await findByTestId(container, 'info');
+    expect(info.textContent).toEqual(aatrox.info);
   });
 });

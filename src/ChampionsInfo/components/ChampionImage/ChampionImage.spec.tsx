@@ -17,7 +17,7 @@ describe('ChampionImage', () => {
   it('should find the image inside', () => {
     const wrapper = shallow(<ChampionImage champion={aChampion} />);
     expect(wrapper.exists()).toBeTruthy();
-    expect(wrapper.find('[data-test-id="image"]').exists()).toBeTruthy();
+    expect(wrapper.find('[data-testid="image"]').exists()).toBeTruthy();
   });
 
   it('should call an event when is clicked', () => {

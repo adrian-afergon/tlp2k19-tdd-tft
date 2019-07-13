@@ -18,7 +18,7 @@ export const ChampionSelector: React.FC<ChampionSelectorProps> = ({
         key={champion.id}
         champion={champion}
         onClick={onSelect}
-        data-test-id={champion.name}
+        data-testid={champion.name}
       />
     ))}
   </section>
