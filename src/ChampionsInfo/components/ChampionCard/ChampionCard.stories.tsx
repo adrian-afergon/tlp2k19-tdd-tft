@@ -1,7 +1,7 @@
 import { storiesOf } from '@storybook/react';
 import * as React from 'react';
-import {ChampionCard} from './ChampionCard';
-import {Champion} from '../../models/Champion';
+import { ChampionCard } from './ChampionCard';
+import { Champion } from '../../models/Champion';
 
 const aChampion: Champion = {
   id: 'irrelevant id',
@@ -9,7 +9,6 @@ const aChampion: Champion = {
   image: 'irrelevant image',
   info: 'This is an irrelevant information about the champion',
 };
-storiesOf('ChampionCard', module)
-  .add('with text', () => (
-  <ChampionCard champion={aChampion}/>
+storiesOf('ChampionCard', module).add('with champion', () => (
+  <ChampionCard champion={aChampion} />
 ));
