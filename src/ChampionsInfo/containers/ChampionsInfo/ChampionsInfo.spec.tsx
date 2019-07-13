@@ -8,9 +8,9 @@ export interface ChampionService {
 }
 
 describe('ChampionsInfo', () => {
-  const aatrox = { info: '', image: '', id: 'irrelevant 1', name: 'aatrox' } as Champion;
-  const kayle = { info: '', image: '', id: 'irrelevant 2', name: 'kayle' } as Champion;
-  const fiora = { info: '', image: '', id: 'irrelevant 3', name: 'fiora' } as Champion;
+  const aatrox: Champion = { info: '', image: '', id: 'irrelevant 1', name: 'aatrox' };
+  const kayle: Champion = { info: '', image: '', id: 'irrelevant 2', name: 'kayle' };
+  const fiora: Champion = { info: '', image: '', id: 'irrelevant 3', name: 'fiora' };
   const someChampions: Champion[] = [aatrox, kayle, fiora];
   let championService: ChampionService;
 
